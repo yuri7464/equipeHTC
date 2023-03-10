@@ -1,0 +1,80 @@
+programa
+{
+	//Caixa Eletrônico
+   
+    funcao inicio()
+    {
+    inteiro opcao, opcao2
+   
+    real valor=1000, soma,saque, deposito, transf, extrato
+        escreva("BANCO\n")
+        escreva("1) SAQUE \n")
+        escreva("2) DEPOSITO \n")
+        escreva("3) TRANSFERENCIA \n")
+ 	   escreva("4) EXTRATO \n")
+
+        escreva("Informe a opção que Deseja ")
+        leia (opcao)
+
+        limpa()
+    
+
+        escolha (opcao)
+        {
+            caso 1:
+            escreva("Informe o valor do saque :")
+            leia (saque)
+            soma=valor-saque
+           
+            se(saque>valor)
+            escreva("Saldo indisponível")
+
+         	  senao {
+         	  escreva("Saque Efetuado")
+         }
+ 
+            pare
+            caso 2:
+            escreva("Informe o valor do  deposito:")
+            leia (deposito)
+            soma=valor+deposito
+            
+            se(deposito>1000){
+            escreva("Não foi possível efetuar o depósito")
+            	
+            } senao 
+            escreva("Depósito efetuado")
+        
+            pare
+
+            caso 3:
+            escreva("Informe o valor da transferência:")
+            leia(transf)
+            se(transf>valor){
+            escreva("Impossível realizar transferência")
+            } senao{
+            escreva("Transferência realizada")	
+            }
+            pare
+
+            caso 4:
+            escreva("1) Extrato Impresso \n")
+            escreva("2) Extrato Digital \n")
+            leia(opcao2)
+            escolha (opcao2){
+           
+            caso 1: 
+            escreva("Extrato Impresso ", valor, "\n")
+            pare
+            caso 2:
+            escreva("Extrato Digital ", valor, "\n")
+            
+            } pare
+            caso contrario:
+            escreva("Opção Invalida!")
+        }
+
+        escreva("\n")
+
+    }
+}
